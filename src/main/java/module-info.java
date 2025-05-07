@@ -9,6 +9,7 @@ module com.tobiasenger.daw.dawnana {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires javafx.media;
 
     opens com.tobiasenger.daw.dawnana to javafx.fxml;
     exports com.tobiasenger.daw.dawnana;

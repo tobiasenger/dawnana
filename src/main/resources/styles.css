@@ -1,0 +1,3 @@
+/* hebt den aktuellen Schritt (Lauflicht) gelb hervor */
+.toggle-button.active-step { -fx-background-color: yellow; }
+.toggle-button.active-play { -fx-background-color: #cd4b4b; }
