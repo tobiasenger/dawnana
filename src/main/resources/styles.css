@@ -1,3 +1,46 @@
-/* hebt den aktuellen Schritt (Lauflicht) gelb hervor */
-.toggle-button.active-step { -fx-background-color: yellow; }
-.toggle-button.active-play { -fx-background-color: #cd4b4b; }
+.toggle-button.step-separator {
+    -fx-border-color: #494949;
+    -fx-border-width: 0 0 0 2; /* links ein 2px Trennstrich */
+}
+
+/* Basis-Farbe für alle Pads (nicht selektiert) */
+.toggle-button.step-pad {
+    -fx-background-color: #ffffff;
+}
+
+/* Farbe für selektierte Pads (wenn User sie schaltet) */
+.toggle-button.step-pad:selected {
+    -fx-background-color: #1b1b1b;
+}
+
+/* Lauflicht-Override gelb (wenn active-step) */
+.toggle-button.active-step {
+    -fx-background-color: #c8c8c8;
+}
+
+/* Lauflicht-Override rot (wenn active-play),
+   *speziﬁsch* für step-pad */
+.toggle-button.step-pad.active-play {
+    -fx-background-color: #0567cf;
+}
+
+/* Play/Pause/Stop Buttons */
+.toggle-button.play-pause-btn {
+    -fx-background-color: #3cdd42;
+    -fx-text-fill: white;
+}
+
+.toggle-button.play-pause-btn:selected {
+    -fx-background-color: #34c638;
+    -fx-text-fill: white;
+}
+
+.toggle-button.play-pause-btn:hover {
+    -fx-background-color: #32a436;
+    -fx-text-fill: white;
+}
+.button.stop-btn       { -fx-background-color: #F44336; -fx-text-fill: white; }
+
+/* Scene-Button Blink-Phasen */
+.toggle-button.blink-phase1 { -fx-background-color: #676767; -fx-text-fill: black; }
+.toggle-button.blink-phase2 { -fx-background-color: #434343; -fx-text-fill: black; }

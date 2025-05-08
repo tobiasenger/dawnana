@@ -4,23 +4,22 @@ package com.tobiasenger.daw.dawnana.model;
 import javafx.scene.media.AudioClip;
 
 /**
- * Represents a single audio sample.
+ * Represents a single audio sample with volume control.
  */
 public class Sample {
     private final String filePath;
-    private AudioClip clip;
+    private final AudioClip clip;
 
     public Sample(String filePath) {
         this.filePath = filePath;
-        load();
+        this.clip = new AudioClip(filePath);
     }
 
-    private void load() {
-        clip = new AudioClip(filePath);
-    }
-
-    public void play() {
-        if (clip != null) clip.play();
+    /**
+     * Play the sample at given volume (0.0 - 1.0).
+     */
+    public void play(double volume) {
+        clip.play(volume);
     }
 
     public String getFilePath() {
